@@ -10,6 +10,9 @@ import { ScrollView } from "react-native";
 import Feature from "../components/Home/Feature";
 
 
+
+
+
 const HomeScreen = () => {
 
     return (
@@ -17,7 +20,7 @@ const HomeScreen = () => {
 
             <View style={{backgroundColor: 'gold', marginVertical: 1}}>
                     <View>
-                        <Text style={{ color: 'gray', marginLeft: 2, fontSize: 64, textAlign: 'center',  }}>CARDÁPIO</Text>
+                        <Text style={{ color: 'white', marginLeft: 2, fontSize: 64, textAlign: 'center',  }}>CARDÁPIO</Text>
                         
                     </View>
                 </View>

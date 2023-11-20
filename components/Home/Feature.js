@@ -1,16 +1,20 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView, StyleSheet } from 'react-native';
 import { data, datasuco } from '../../data/Data';
 import FeatureCard from './FeatureCard';
 
 const Feature = () => {
     return (
-        <View style={{ marginTop: 8, paddingHorizontal: 8 }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={{ fontWeight: 'bold', fontSize: 36, color: '#333', marginBottom: 15 }}>Lanches</Text>
+        <ScrollView
+            style={styles.container}
+            contentContainerStyle={styles.scrollContentContainer}
+            showsVerticalScrollIndicator={false}
+        >
+            <View style={styles.categoryContainer}>
+                <Text style={styles.categoryText}>Lanches</Text>
             </View>
-            {data.map((offer) => (
-                <View key={offer.id} style={{ marginBottom: 1 }}>
+            {data.map((offer, index) => (
+                <View key={offer.id} style={[styles.cardContainer, index === data.length - 1 && styles.lastCard]}>
                     <FeatureCard
                         id={offer.id}
                         img={offer.image}
@@ -24,11 +28,11 @@ const Feature = () => {
                 </View>
             ))}
 
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={{ fontWeight: 'bold', fontSize: 36, color: '#333', marginBottom: 15 }}>Sucos</Text>
+            <View style={styles.categoryContainer}>
+                <Text style={styles.categoryText}>Bebidas</Text>
             </View>
-            {datasuco.map((offer) => (
-                <View key={offer.id} style={{ marginBottom: 1 }}>
+            {datasuco.map((offer, index) => (
+                <View key={offer.id} style={[styles.cardContainer, index === datasuco.length - 1 && styles.lastCard]}>
                     <FeatureCard
                         id={offer.id}
                         img={offer.image}
@@ -40,12 +44,37 @@ const Feature = () => {
                         favor={offer.favorite}
                     />
                 </View>
-
             ))}
-        </View>
-
-
+        </ScrollView>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingHorizontal: 8,
+        backgroundColor: '#fff', 
+    },
+    scrollContentContainer: {
+        paddingBottom: 40, 
+    },
+    categoryContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    categoryText: {
+        fontWeight: 'bold',
+        fontSize: 36,
+        color: '#333',
+        marginBottom: 15,
+    },
+    cardContainer: {
+        marginBottom: 1,
+    },
+    lastCard: {
+        marginBottom: 16, 
+    },
+});
 
 export default Feature;

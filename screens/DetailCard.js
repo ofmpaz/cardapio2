@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
-const DetailCard = ({ name, img, price, cat, location, des }) => {
+const DetailCard = ({ name, img, price, des }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   const handleAddToCart = () => {
@@ -82,13 +82,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   price: {
-    color: '#FFB800',
+    color: 'green',
     fontSize: 17,
     textAlign: 'center',
     marginBottom: 10,
   },
   addToCartButton: {
-    backgroundColor: '#00CCBB',
+    backgroundColor: '#FFB800',
     padding: 10,
     borderRadius: 10,
     alignSelf: 'stretch',

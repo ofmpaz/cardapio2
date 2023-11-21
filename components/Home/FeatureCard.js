@@ -43,9 +43,9 @@ const FeatureCard = (props) => {
                         <Text style={{ color: 'gray', marginTop: 5, flex: 1 }}>{props.des}</Text>
                     </View>
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingTop: 5, paddingBottom: 5 }}>
-                        <Text style={{ color: '#FFB800', fontSize: 20 }}>R$ {props.price}</Text>
+                        <Text style={{ color: 'green', fontSize: 20 }}>R$ {props.price}</Text>
                         <TouchableOpacity style={{ marginLeft: 'auto' }} onPress={toggleFavorite}>
-                            <Icon name="star" size={25} color={isFavorited ? 'gold' : '#A7A7A7'} />
+                            <Icon name="star" size={25} color={isFavorited ? '#FFB800' : '#A7A7A7'} />
                         </TouchableOpacity>
                     </View>
                 </View>

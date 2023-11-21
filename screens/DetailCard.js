@@ -40,58 +40,59 @@ const DetailCard = ({ name, img, price, cat, location, des }) => {
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   detailTitle: {
-    fontSize: 45,
+    borderBottomRightRadius: 15,
+    borderBottomLeftRadius: 15,
+    borderBottomStartRadius: 20,
+    color: 'white',
+    fontSize: 35,
+    padding:15,
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
-    backgroundColor: 'gold',
-    borderBottomStartRadius: 20,
-    color:'white',
+    backgroundColor: '#FFB800',
   },
   cardContainer: {
-    flexDirection: 'row',
+    flexDirection: 'column',
+    alignItems: 'center',
     marginBottom: 10,
-    borderWidth: 1,
-    borderColor: 'lightslategray',
-    borderRadius: 10,
     padding: 8,
   },
   image: {
-    width: 150,
-    height: 130,
+    width: 350,
+    height: 230,
     borderRadius: 10,
+    marginBottom: 10,
   },
   detailsContainer: {
-    flex: 1,
-    marginLeft: 10,
-    marginHorizontal: 15,
-    paddingVertical: 10,
-    marginLeft: 25,
+    alignItems: 'center',  // Centraliza os elementos na horizontal
   },
   name: {
     fontWeight: 'bold',
     fontSize: 30,
     color: '#333',
+    textAlign: 'center',
+    marginBottom: 10,
   },
   description: {
     color: 'gray',
-    marginTop: 5,
     fontSize: 21,
+    textAlign: 'center',
+    marginBottom: 10,
   },
   price: {
-    color: '#00CCBB',
-    fontSize: 20,
-    marginTop: 5,
+    color: '#FFB800',
+    fontSize: 17,
+    textAlign: 'center',
+    marginBottom: 10,
   },
   addToCartButton: {
-    marginTop: 10,
     backgroundColor: '#00CCBB',
     padding: 10,
     borderRadius: 10,
     alignSelf: 'stretch',
+    marginTop: 10,
   },
   addToCartButtonText: {
     color: 'white',

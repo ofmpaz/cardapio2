@@ -18,9 +18,9 @@ const HomeScreen = () => {
     return (
         <SafeAreaView className=" bg-white">
 
-            <View style={{backgroundColor: 'gold', marginVertical: 1}}>
+            <View style={{backgroundColor: '#FFB800', marginVertical: 1, borderBottomRightRadius:15, borderBottomLeftRadius:15}}>
                     <View>
-                        <Text style={{ color: 'white', marginLeft: 2, fontSize: 64, textAlign: 'center',  }}>CARDÁPIO</Text>
+                        <Text style={{ color: 'white', marginLeft: 2, fontSize: 30, textAlign: 'center', padding:25, fontWeight:"bold" }}>CARDÁPIO</Text>
                         
                     </View>
                 </View>

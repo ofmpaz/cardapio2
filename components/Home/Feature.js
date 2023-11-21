@@ -65,15 +65,19 @@ const styles = StyleSheet.create({
     },
     categoryText: {
         fontWeight: 'bold',
-        fontSize: 36,
+        fontSize: 20,
+        marginTop:25,
+        marginLeft:20,
         color: '#333',
-        marginBottom: 15,
+        marginBottom: 25,
     },
     cardContainer: {
         marginBottom: 1,
+        marginRight:15,
+        marginLeft:15,
     },
     lastCard: {
-        marginBottom: 16, 
+        marginBottom: 30, 
     },
 });
 

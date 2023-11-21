@@ -26,7 +26,7 @@ const FeatureCard = (props) => {
 
     return (
         <TouchableOpacity onPress={navigateToDetails}>
-            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10, borderWidth: 1, borderColor: 'lightslategray', borderRadius: 8 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10, borderWidth: 1, borderColor: '#A7A7A7', borderRadius: 8 }}>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 130, height: 100 }}>
                     <Image source={{ uri: props.img }} style={{ width: 120, height: 90, borderRadius: 11 }} />
                 </View>
@@ -43,9 +43,9 @@ const FeatureCard = (props) => {
                         <Text style={{ color: 'gray', marginTop: 5, flex: 1 }}>{props.des}</Text>
                     </View>
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingTop: 5, paddingBottom: 5 }}>
-                        <Text style={{ color: '#00CCBB', fontSize: 20 }}>R$ {props.price}</Text>
+                        <Text style={{ color: '#FFB800', fontSize: 20 }}>R$ {props.price}</Text>
                         <TouchableOpacity style={{ marginLeft: 'auto' }} onPress={toggleFavorite}>
-                            <Icon name="star" size={25} color={isFavorited ? 'gold' : 'gray'} />
+                            <Icon name="star" size={25} color={isFavorited ? 'gold' : '#A7A7A7'} />
                         </TouchableOpacity>
                     </View>
                 </View>
